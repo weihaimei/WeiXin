@@ -1,0 +1,42 @@
+<view class="foods">
+      <view class="header">
+        <view class="menu">
+          <view class="menu-all" style="padding: 0 15px">
+            <a class="df">
+              <text class="icon-command" style="font-size: 24px;color: #838383"></text>
+              <view class="text" style='font-size: 14px'>全部</view>
+            </a>
+          </view>
+          <view class="menu-list" ref="menuList">
+            <view class="listUl">
+              <view class="act" wx:for="{{banner}}" wx:key="item.id">
+                <image src="{{item.icon2}}"></image>
+                <view class="text" style='font-size: 14px;margin-top: -2px'>{{item.name}}</view>
+              </view>
+            </view>
+          </view> 
+        </view>
+      </view>
+       <view class="container">
+        <view>
+          <view class="good-list" wx:for="{{good}}" wx:key="item.id">
+            <view class="image">
+              <a>
+                <image src="{{item.image}}"></image>
+              </a>
+            </view>
+            <view class="sale">
+              <a class="aa">
+                <view class="name">{{item.name}}</view>
+                <p class="resume">{{item.resume}}</p>
+                <b class="price">{{item.price}}</b>
+                <view class="model">{{item.model}}</view>
+              </a>
+            </view>
+          </view>
+        </view>
+        <!-- <view class="icon-top">
+          <text class="icon icon-vertical_align_top"></text>
+        </view> -->
+      </view> 
+    </view>
